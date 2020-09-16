@@ -1,0 +1,12 @@
+<nav class="category-sidebar">
+  <ul>
+    <li *ngFor="let category of categories"
+        [ngClass]="{
+          'active': router.url.includes('category/'+category.id),
+          'focused': isActive && category === categories[current]
+        }"
+        class="nav-link">
+      <a (click)="selectCategory(category)" class="link">{{category.name}}</a>
+    </li>
+  </ul>
+</nav>

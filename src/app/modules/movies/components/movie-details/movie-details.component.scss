@@ -1,0 +1,60 @@
+.movie-details {
+  color: white;
+  .title {
+    font-size: 20px;
+    margin-top: 0;
+    font-weight: normal;
+  }
+  .details-row {
+    display: flex;
+    flex-direction: row;
+    .detail-block {
+      border-top: 1px solid gray;
+      margin-right: 20px;
+      min-width: calc(50% / 2 - 15px);
+      .detail-title {
+        color: gray;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+      .detail-info {
+        font-size: 14px;
+      }
+    }
+    .movie-img {
+      height: auto;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .movie-overview {
+      margin: 40px 0 0 20px;
+      line-height: 1.7;
+    }
+  }
+  .actions {
+    margin-top: 40px;
+    .btn {
+      color: white;
+      display: inline-block;
+      background: transparent;
+      height: 70px;
+      padding: 20px 40px;
+      border: 3px solid transparent;
+      outline: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      &.active {
+        background-color: #cc7533;
+      }
+      &.focused {
+        border: 3px solid #cc7533;
+      }
+      &.disabled {
+        background-color: gray;
+      }
+    }
+  }
+}

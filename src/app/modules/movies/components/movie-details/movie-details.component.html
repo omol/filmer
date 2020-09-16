@@ -1,0 +1,43 @@
+<ng-container [ngSwitch]="loader">
+  <ng-container *ngSwitchCase="true">
+    <app-spinner-overlay></app-spinner-overlay>
+  </ng-container>
+  <ng-container *ngSwitchCase="false">
+    <div class="movie-details" *ngIf="movie; else noMovie">
+      <h2 class="title">{{movie.original_title}}<span> ({{movie.release_date | date: 'y'}})</span></h2>
+      <div class="details-row">
+        <div class="detail-block">
+          <p class="detail-title">Length</p>
+          <p class="detail-info">{{movie.runtime}} minutes</p>
+        </div>
+        <div class="detail-block">
+          <p class="detail-title">Country</p>
+          <span *ngFor="let country of movie.production_countries; last as last "
+            class="detail-info">{{country.name}}<span *ngIf="!last">, </span>
+          </span>
+          <span *ngIf="!movie.production_countries?.length">--</span>
+        </div>
+        <div class="detail-block">
+          <p class="detail-title">Language</p>
+          <span *ngFor="let lang of movie.spoken_languages; last as last" class="detail-info">{{lang.name}}
+            <span *ngIf="!last">,</span>
+          </span>
+        </div>
+      </div>
+      <div class="details-row">
+        <div class="movie-img">
+          <img [src]="'https://image.tmdb.org/t/p/w440_and_h660_face' + movie.backdrop_path">
+        </div>
+        <p class="movie-overview">{{movie.overview}}</p>
+      </div>
+      <div class="actions">
+        <button class="btn disabled" [class.focused]="isActive" (click)="watchMovieBtnEvent()">
+          Watch
+        </button>
+      </div>
+    </div>
+    <ng-template #noMovie>
+      <p class="no-data">There's no such movie.</p>
+    </ng-template>
+  </ng-container>
+</ng-container>

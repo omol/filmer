@@ -1,0 +1,13 @@
+.movies-list {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .movie-poster {
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 5px;
+    &.active {
+      border: 2px solid #cc7533;
+    }
+  }
+}

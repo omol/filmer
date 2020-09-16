@@ -1,0 +1,10 @@
+.movies-wrap {
+  display: flex;
+  flex-direction: row;
+  .sidebar {
+    width: 23%;
+  }
+  .content {
+    width: 78%;
+  }
+}

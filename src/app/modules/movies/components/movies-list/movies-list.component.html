@@ -1,0 +1,15 @@
+<ng-container [ngSwitch]="loader">
+  <ng-container *ngSwitchCase="true">
+    <app-spinner-overlay></app-spinner-overlay>
+  </ng-container>
+  <ng-container *ngSwitchCase="false">
+    <div *ngFor="let movie of movies" class="movies-list">
+      <app-movie-poster
+        [posterImg]="movie.poster_path"
+        (click)="openMovieDetails(movie)"
+        [class.active]="isActive && movie === movies[currentMovie]"
+        class="movie-poster"
+      ></app-movie-poster>
+    </div>
+  </ng-container>
+</ng-container>

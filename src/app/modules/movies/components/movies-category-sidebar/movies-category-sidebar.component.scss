@@ -1,0 +1,39 @@
+.category-sidebar {
+  ul {
+    margin: 5px 60px 0 30px;
+    padding: 0;
+    .nav-link {
+      color: gray;
+      cursor: pointer;
+      list-style: none;
+
+      font-size: 18px;
+      line-height: 22px;
+      border: 2px solid transparent;
+      letter-spacing: 0.3px;
+      &.focused {
+        border: 2px solid #cc7533;
+        border-radius: 5px;
+      }
+      &.active {
+        color: white;
+        .link {
+          &::after {
+            content: '\203A';
+            font-size: 22px;
+            margin-left: 10px;
+            color: #cc7533;
+          }
+        }
+      }
+      .link {
+        padding: 10px;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
