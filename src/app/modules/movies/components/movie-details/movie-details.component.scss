@@ -21,16 +21,24 @@
         font-size: 14px;
       }
     }
+  }
+  .movie-row {
+     padding: 40px 40px 0px 0px;
+     display: flex;
+     align-items: flex-start;
     .movie-img {
+      width: 30%;
       height: auto;
+      padding-top: 8px;
       img {
         height: 100%;
         width: 100%;
       }
     }
     .movie-overview {
-      margin: 40px 0 0 20px;
       line-height: 1.7;
+      max-width: 70%;
+      margin: 0 40px;
     }
   }
   .actions {

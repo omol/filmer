@@ -58,7 +58,6 @@ export class KeyNavService {
   }
 
   set focusedComponentId(val: string) {
-    console.log(val);
     this._focusedComponentId.next(val);
   }
 
