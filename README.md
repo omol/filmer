@@ -1,6 +1,11 @@
 # Filmer
+DEMO - https://omol.github.io/filmer/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+
+
+Movies website with keyboard navigation control.
+It is possible to navigate with both arrow controls and 'A'/'D', 'W'/'S' keys. To navigate back - 'B' key, select - 'Enter'.
+[Angular CLI] - version 10.1.1.
 
 ## Development server
 
